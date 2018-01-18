@@ -237,8 +237,16 @@
     display: inline-block;
     cursor: pointer;
     transition: .2s;
+    font-weight: 600;
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
     &:hover {
         color: var(--color-grey-dark-1);
+        span {
+            margin-left: 8px;
+        }
     }
     &:focus {
         outline: none;
@@ -251,10 +259,12 @@
         transform: scale(1);
         box-shadow: none;
     }
+
     50% {
         transform: scale(1.05);
-        box-shadow: 0 1rem 4rem (0, 0, 0, .25);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
     }
+
     100% {
         transform: scale(1);
         box-shadow: none;
@@ -327,8 +337,12 @@
     padding: 3rem;
     margin-bottom: 3.5rem;
     box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
     &__text {
         margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
     }
     &__user {
         display: flex;
@@ -357,5 +371,16 @@
         color: var(--color-primaty);
         font-size: 2.2rem;
         font-weight: 300;
+    }
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        line-height: 1;
+        z-index: 1;
     }
 }
