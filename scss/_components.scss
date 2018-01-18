@@ -175,7 +175,7 @@
 
 .overview {
     display: flex;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     &__heading {
         font-size: 2.25rem;
         font-weight: 300;
@@ -259,4 +259,27 @@
         transform: scale(1);
         box-shadow: none;
     }
+}
+
+
+/*-------- DETAIL ---------*/
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+
+.description {
+    padding: 3rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-review {
+    flex: 1;
+    background-color: aqua;
 }
