@@ -264,22 +264,35 @@
 
 /*-------- DETAIL ---------*/
 
-.detail {
-    display: flex;
-    padding: 4.5rem;
-    background-color: var(--color-grey-light-1);
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.list {
+    margin: 3rem 0;
+    padding: 3rem 0;
+    list-style: none;
+    border-top: var(--line);
     border-bottom: var(--line);
-}
-
-.description {
-    padding: 3rem;
-    background-color: #fff;
-    box-shadow: var(--shadow-light);
-    flex: 0 0 60%;
-    margin-right: 4.5rem;
-}
-
-.user-review {
-    flex: 1;
-    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+    &__item::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        margin-right: .7rem;
+        display: inline-block;
+        //        background-image: url(../images/SVG/chevron-thin-right.svg);
+        //        background-size: cover;
+        background-color: var(--color-primary);
+        
+        -webkit-mask-image: url(../images/SVG/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../images/SVG/chevron-thin-right.svg);
+        mask-size: cover;
+    }
 }
