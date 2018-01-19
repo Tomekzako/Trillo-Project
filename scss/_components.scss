@@ -105,6 +105,10 @@
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+    @media only screen and( max-width: $bp-medium) {
+        margin: 0;
+        display: flex;
+    }
     &__item::before {
         content: "";
         position: absolute;
@@ -120,6 +124,12 @@
         position: relative;
         &:not(last-child) {
             margin-bottom: .5rem;
+            @media only screen and( max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+        @media only screen and( max-width: $bp-medium) {
+            flex: 1;
         }
     }
     &__item:hover::before,
@@ -146,6 +156,10 @@
         align-items: center;
         position: relative;
         z-index: 10;
+        @media only screen and( max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 }
 
@@ -157,6 +171,9 @@
     color: var( --color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+    @media only screen and( max-width: $bp-largest) {
+        display: none;
+    }
 }
 
 
@@ -315,6 +332,9 @@
     &__count {
         margin-right: auto;
     }
+    &__friends {
+        display: flex;
+    }
     &__photo {
         box-sizing: content-box;
         width: 4rem;
@@ -322,7 +342,7 @@
         border-radius: 50%;
         border: 3px solid #fff;
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -1.7rem;
         }
     }
 }
@@ -337,6 +357,10 @@
     box-shadow: var(--shadow-light);
     position: relative;
     overflow: hidden;
+    @media only screen and( max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
     &__text {
         margin-bottom: 2rem;
         z-index: 10;
